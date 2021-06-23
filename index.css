@@ -1,0 +1,221 @@
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a:visited {
+    text-decoration: none;
+    color: unset;
+}
+
+
+/* NAVIGATION BAR */
+
+.navbar {
+    border-bottom: 1px solid rgba(29, 29, 29, 0.2);
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__title {
+    padding: 22px 0;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 2;
+}
+
+.navbar__primary-menu {
+    list-style-type: none;
+    display: flex;
+    font-size: 14px;
+}
+
+.navbar__primary-menu > li {
+    color: rgb(99, 99, 102);
+    padding: 22px;
+}
+
+.navbar__secondary-menu {
+    list-style-type: none;
+    display: flex;
+    font-size: 14px;
+}
+
+.navbar__secondary-menu > li {
+    padding: 22px;
+}
+
+.navbar__menu-icon {
+    padding: 24px;
+    border-right: 1px solid rgba(29, 29, 29, 0.2);
+    color: rgba(29, 29, 29, 0.6);
+    margin-right: 24px;
+}
+
+.navbar__search-icon {
+    padding: 24px;
+    border-left: 1px solid rgba(29, 29, 29, 0.2);
+    color: rgba(29, 29, 29, 0.6);
+    margin-left: 24px;
+}
+
+.navbar__primary-menu--selected {   
+    position: relative;
+}
+
+.navbar__primary-menu--selected:before {
+    content : "";
+    position: absolute;
+    left    : 12%;
+    bottom  : 0;
+    width   : 75%;
+    border-bottom: 3px solid rgba(253, 187, 48, 1);
+    margin-bottom: -1;
+}
+
+.navbar__primary-menu--selected > a {
+    color: black;
+}
+
+/* PDP HEADER */
+
+.pdp-header {
+    display: grid;
+    grid-template-columns: repeat(2, 0.7fr) repeat(3, 0.5fr);
+    margin: 28px 44px;
+}
+
+.pdp-header > :first-child,
+.pdp-header > :nth-child(2),
+.pdp-header > :nth-child(3) {
+    border-right: 1px solid rgba(29, 29, 29, 0.2);
+}
+
+.pdp-header__item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.pdp-header__item > :first-child {
+    color: rgba(99, 99, 102, 1);
+    font-size: 12px;
+}
+
+.pdp-header__icon {
+    float: right;
+    padding-right: 24px;
+}
+
+.pdp-header__button {
+    border: none;
+    background-color: rgba(253, 187, 48, 1);
+    transition: background-color 0.5s ease;
+    font-weight: bold;
+    width: 200px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.pdp-header__button:hover {
+    background-color: rgba(255, 219, 145, 1);
+}
+
+/* PDP BODY */
+
+.pdp {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(85%,#f6ddd1), color-stop(85%,#fff));
+}
+
+
+/* PDP DESCRIPTION */
+.pdp__title {
+    font-family: 'Arvo', serif;
+    text-align: center;
+    font-size: 60px;
+    padding: 60px 0 24px 0;
+
+}
+
+.pdp__primary-features {
+    display: grid;
+    grid-template-columns: repeat(5, 0.2fr);
+    list-style-type: none;
+    width: 740px;
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.pdp__secondary-features {
+    display: grid;
+    grid-template-columns: 0.3fr 0.4fr 0.3fr;
+    padding: 12px;
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    border-top: 1px solid rgba(29, 29, 29, 0.2);
+    border-bottom: 1px solid rgba(29, 29, 29, 0.2);
+}
+
+.pdp__icons{
+    color: rgba(29, 29, 29, 0.6);;
+}
+
+/* PDP CAROUSEL */
+.pdp__image-carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.pdp__image-carousel > img {
+    width: 95%;
+    order: 2;
+}
+
+.pdp__image-carousel--navigate-left {
+    order: 1;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 800px;
+}
+
+.pdp__image-carousel--navigate-left > svg {
+    cursor: pointer;
+}
+
+.pdp__image-carousel--navigate-right {
+    order: 3;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 800px;
+}
+
+.pdp__image-carousel--navigate-right > svg {
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.pdp__image-carousel--navigate-right > span {
+    background: white;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-right: 24px;
+}
