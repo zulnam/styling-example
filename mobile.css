@@ -1,0 +1,34 @@
+@media screen and   (max-width: 475px) {
+
+    /* NAVIGATION BAR */
+    .navbar__primary-menu {
+        display: none;
+    }
+
+    .navbar__secondary-menu {
+        display: none;
+    }
+
+    /* PDP HEADER */
+
+    .pdp-header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin: 12px;
+    }
+
+    /* PDP DESCRIPTION */
+
+    .pdp__primary-features {
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        grid-row-gap: 24px;
+    }
+
+    .pdp__primary-features > :nth-child(5) {
+        grid-column-start: 3;
+    }
+
+  }
